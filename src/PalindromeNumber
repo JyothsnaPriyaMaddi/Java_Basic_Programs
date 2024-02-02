@@ -1,0 +1,31 @@
+
+import java.util.Scanner;
+
+public class PalindromeNumber {
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int number = sc.nextInt();
+
+		Solution.palindromeNumber(number);
+	}
+	public static void palindromeNumber(int number) {
+		// 121, 232, 989, 444
+		int temp = number;
+		String reverse = "";
+		int remainder = 0;
+		while(number != 0) {
+			remainder = number%10;
+			reverse = reverse + remainder;
+			number = number / 10;
+		}
+		System.out.println("Reverse: "+ reverse);
+		int reverseNumber = Integer.parseInt(reverse);
+		if(temp == reverseNumber) {
+			System.out.println("Palindrome");
+		} else {
+			System.out.println("Not a Palindrome");
+		}
+	}
+}
