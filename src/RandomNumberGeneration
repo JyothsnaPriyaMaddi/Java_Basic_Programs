@@ -1,0 +1,9 @@
+public class RandomNumberGeneration {
+	public static void main(String[] args) {
+		int random = (int) (Math.random() * 10);
+    //Math.random() generates double value below 1 
+    // multiplying it with 10 makes it more than 1
+    //by default Math.random() is double, so we are type casting it to int
+		System.out.println(random);	
+	}
+}
